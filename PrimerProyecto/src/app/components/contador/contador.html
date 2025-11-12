@@ -1,0 +1,14 @@
+<div class="contendor">
+  <div class="semaforo">
+    <div *ngIf="numero ==0; else gris" class="circulo rojo"></div>
+    <div *ngIf="numero == 1; else gris" class="circulo naranja"></div>
+    <div *ngIf="numero > 1; else gris" class="circulo verde"></div>
+  </div>
+<button class="boton1" (click)="incrementar()">Cambio</button>
+</div>
+
+
+
+<ng-template #gris>
+  <div class="circulo gris"></div>
+</ng-template>

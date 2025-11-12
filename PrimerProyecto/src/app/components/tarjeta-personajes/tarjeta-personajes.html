@@ -1,0 +1,18 @@
+<div class="ficha" [ngClass]="raza()">
+  <img class="imagen" [src]="personaje.imagen" [alt]="personaje.nombre">
+
+  <div class="contenido">
+    <h3 class="nombre">{{ personaje.nombre }}</h3>
+    <p class="raza">Raza: {{ personaje.raza }}</p>
+
+    <div class="poder">
+      <span class="label">Poder:</span>
+      <div class="estrellas">
+        <span *ngFor="let s of estrellas(); let i = index"
+              class="estrella"
+              [class.filled]="i + 1 <= personaje.poder">★</span>
+      </div>
+    </div>
+  </div>
+</div>
+

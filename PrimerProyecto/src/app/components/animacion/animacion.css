@@ -1,0 +1,18 @@
+.circulo {
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      border-radius: 50%;
+      border: solid 2px black;
+      margin: 100px auto;
+      animation: pulso 2s infinite ease-in-out;
+    }
+
+    @keyframes pulso {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+    }

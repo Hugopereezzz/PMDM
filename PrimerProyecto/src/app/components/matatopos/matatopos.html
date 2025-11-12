@@ -1,0 +1,36 @@
+<div class="tablero">
+    <div *ngIf="numero === 1; else noVisible">
+        <button class="circulorojo" (click)="clickEnBoton(true)"></button>
+    </div>
+    <div *ngIf="numero === 2; else noVisible">
+        <button class="circulorojo" (click)="clickEnBoton(true)"></button>
+    </div>
+    <div *ngIf="numero === 3; else noVisible">
+        <button class="circulorojo" (click)="clickEnBoton(true)"></button>
+    </div>
+    <div *ngIf="numero === 4; else noVisible">
+        <button class="circulorojo" (click)="clickEnBoton(true)"></button>
+    </div>
+    <div *ngIf="numero === 5; else noVisible">
+        <button class="circulorojo" (click)="clickEnBoton(true)"></button>
+    </div>
+    <div *ngIf="numero === 6; else noVisible">
+        <button class="circulorojo" (click)="clickEnBoton(true)"></button>
+    </div>
+    <div *ngIf="numero === 7; else noVisible">
+        <button class="circulorojo" (click)="clickEnBoton(true)"></button>
+    </div>
+    <div *ngIf="numero === 8; else noVisible">
+        <button class="circulorojo" (click)="clickEnBoton(true)"></button>
+    </div>
+    <div *ngIf="numero === 9; else noVisible">
+        <button class="circulorojo" (click)="clickEnBoton(true)"></button>
+    </div>
+    <h2>Puntos: {{ puntos }}</h2>
+</div>
+
+ <ng-template #noVisible>
+    <div>
+        <button class="circulos" (click)="clickEnBoton(false)"></button>
+    </div>
+ </ng-template>

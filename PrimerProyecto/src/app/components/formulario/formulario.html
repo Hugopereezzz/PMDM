@@ -1,0 +1,74 @@
+<form class="formularioo" [formGroup]="formulario" (ngSubmit)="onSubmit(); mostrar()">
+  
+
+  <div class="contenedor-campo">
+    <label for="nombre">Nombre:</label>
+  <input id="nombre" formControlName="nombre">
+  @if(formulario.controls['nombre'].touched){
+  <div class="mensaje-error">
+    @if(formulario.controls['nombre'].hasError('required')) { <p>👻 Este campo da más miedo vacío, ¡rellénalo!</p> }
+    @if(formulario.controls['nombre'].hasError('minlength')) { <p>Mínimo 3 letras</p> }
+  </div>
+  }
+  </div>
+
+
+<div class="contenedor-campo">
+  <label for="email">Email:</label>
+  <input id="email" formControlName="email">
+  @if(formulario.controls['email'].touched){
+  <div class="mensaje-error">
+    @if(formulario.controls['email'].hasError('required')) { 👻 Este campo da más miedo vacío, ¡rellénalo! }
+    @if(formulario.controls['email'].hasError('email')) { 🩸 Ese correo parece maldito… revisa el formato }
+  </div>  
+    }   
+    </div>
+
+<div class="contenedor-campo1">
+    <mat-form-field>
+    <mat-label>Tipo de Invitado</mat-label>
+    <mat-select>
+      <mat-option value="option">Humano</mat-option>
+      <mat-option value="option">Fantasma</mat-option>
+      <mat-option value="option">Vampiro</mat-option>
+      <mat-option value="option">Bruja</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+  <div class="contenedor-campo">
+    <label for="nombre">Disfraz</label>
+  <input id="disfraz" formControlName="disfraz">
+  @if(formulario.controls['disfraz'].touched){
+  <div class="mensaje-error">
+    @if(formulario.controls['disfraz'].hasError('required')) { <p>👻 Este campo da más miedo vacío, ¡rellénalo!</p> }
+  </div>
+  }
+  </div>
+
+<div class="contenedor-campo">
+    <label for="fechaLlegada">Fecha de llegada</label>
+    <input type="date" id="fechaLlegada" formControlName="fechaLlegada"/>
+    @if(formulario.controls['fechaLlegada'].touched){
+  <div class="mensaje-error">
+    @if(formulario.controls['fechaLlegada'].hasError('required')) { <p>👻 Este campo da más miedo vacío, ¡rellénalo!</p> }
+  </div>
+    }
+</div>
+
+<div class="contenedor-campo2">
+    <label>
+      <input type="checkbox" formControlName="aceptaReglas" />
+      Prometo no morder a los demás invitados
+    </label>
+</div>
+
+
+
+  <button type="submit">Enviar</button>
+  <button type="button" (click)="resetear()">Resetear</button>
+</form>
+
+<div *ngIf="mensajeExito" class="mensaje-exito">
+  {{ mensajeExito }}
+</div>

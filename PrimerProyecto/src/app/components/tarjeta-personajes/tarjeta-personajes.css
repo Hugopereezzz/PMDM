@@ -1,0 +1,28 @@
+.ficha {
+  border: 10px solid black;
+  padding: 12px;
+  text-align: center;
+  width: 200px;
+  margin: 10px;
+}
+.imagen {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.estrella {
+  font-size: 1.2rem;
+  color: gold;
+  margin-right: 2px;
+}
+
+.raza-humano   { background: #F5D7B5;}
+.raza-elfo     { background: blue; }
+.raza-enano    { background: yellow; }
+.raza-ogro     { background: #304230; }
+.raza-troll    { background: #CCFFE6; }
+
+.raza-humano, .raza-elfo, .raza-enano, .raza-ogro, .raza-troll, .raza-default {
+  padding: 10px;
+  border-radius: 15%;
+}

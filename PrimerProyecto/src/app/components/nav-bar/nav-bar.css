@@ -1,0 +1,22 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.opcion{
+    cursor: pointer;
+}
+.opcion:hover{
+        font-weight: 700;
+}
+
+.navbar-buttons button {
+  margin-left: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.navbar-buttons button:hover {
+  opacity: 0.8;
+}

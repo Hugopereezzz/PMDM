@@ -1,0 +1,67 @@
+<div class="formulario">
+  <form class="add-task-form" (ngSubmit)="addTask()">
+    <input type="text" placeholder="Nueva tarea" [(ngModel)]="newTask" name="newTask" required>
+    <select [(ngModel)]="selectedList" name="selectedList" required>
+      <option value="" disabled selected>Selecciona una lista</option>
+      <option value="todo">To do</option>
+      <option value="doing">Doing</option>
+      <option value="done">Done</option>
+    </select>
+    <button type="submit">Añadir</button>
+  </form>
+</div>
+<div class="todoDiv">
+<div class="example-container">
+  <h2>To do</h2>
+  <div
+    cdkDropList
+    #todoList="cdkDropList"
+    [cdkDropListData]="todo"
+    [cdkDropListConnectedTo]="[doneList, doingList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    @for (item of todo; track item) {
+      <div class="example-box" cdkDrag>{{item}}
+        <button class="delete-btn" type="button" (click)="removeTask('todo', item)">✕</button>
+      </div>
+    }
+  </div>
+</div>
+
+<div class="example-container">
+  <h2>Doing</h2>
+
+  <div
+    cdkDropList
+    #doingList="cdkDropList"
+    [cdkDropListData]="doing"
+    [cdkDropListConnectedTo]="[doneList, todoList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    @for (item of doing; track item) {
+      <div class="example-box" cdkDrag>{{item}}
+        <button class="delete-btn" type="button" (click)="removeTask('doing', item)">✕</button>
+      </div>
+    }
+  </div>
+</div>
+
+<div class="example-container">
+  <h2>Done</h2>
+
+  <div
+    cdkDropList
+    #doneList="cdkDropList"
+    [cdkDropListData]="done"
+    [cdkDropListConnectedTo]="[todoList, doingList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    @for (item of done; track item) {
+      <div class="example-box" cdkDrag>{{item}}
+        <button class="delete-btn" type="button" (click)="removeTask('done', item)">✕</button>
+      </div>
+    }
+  </div>
+</div>
+</div>
+

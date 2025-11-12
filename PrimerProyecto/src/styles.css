@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body.tema-normal {
+  background-color: bisque;
+}
+
+body.tema-halloween {
+  background-image: url('/images/halloween.png');
+}
+
+body.tema-navidad {
+  background-image: url('/images/navidad.png');
+}

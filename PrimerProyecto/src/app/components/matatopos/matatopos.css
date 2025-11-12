@@ -1,0 +1,27 @@
+.tablero{
+    width: 600px;
+    height: 600px;
+    background-color: grey;
+    border: 3px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    align-content: space-around; 
+    padding: 10px;
+}
+
+.circulos{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: white;
+    border: 3px solid black;
+}
+
+.circulorojo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: red;
+    border: 3px solid black; 
+}
