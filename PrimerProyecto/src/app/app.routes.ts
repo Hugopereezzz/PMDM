@@ -6,6 +6,7 @@ import { PasoParametros } from './components/paso-parametros/paso-parametros';
 import { ListaPersonajes } from './components/lista-personajes/lista-personajes';
 import { Formulario } from './components/formulario/formulario';
 import { KanbanBoard } from './components/kanban-board/kanban-board';
+import { Coockieclicker } from './components/coockieclicker/coockieclicker';
 
 export const routes: Routes = [
     { path: 'contador', component: Contador},
@@ -15,4 +16,5 @@ export const routes: Routes = [
     { path: 'lista-personajes', component: ListaPersonajes},
     { path: 'formulario', component: Formulario},
     { path: 'kanban-board', component: KanbanBoard},
+    { path: 'coockieclicker', component: Coockieclicker},
 ];
