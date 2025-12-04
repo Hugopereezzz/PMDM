@@ -1,1 +1,32 @@
-<p>coockieclicker works!</p>
+<div class="game-wrapper">
+  
+  <section class="cookie-section">
+    <div class="header">
+      <h1>{{ cookies | number:'1.0-0' }} Galletas</h1>
+      <p>por segundo: {{ getCookiesPerSecond() | number:'1.1-1' }}</p>
+    </div>
+
+    <button class="big-cookie" (click)="clickCookie()">
+      🍪
+    </button>
+  </section>
+
+  <section class="store-section">
+    <h2>Tienda</h2>
+    
+    <div class="building-card" 
+         *ngFor="let item of buildings" 
+         [class.disabled]="cookies < item.cost"
+         (click)="buyBuilding(item)"> <div class="icon">{{ item.icon }}</div>
+      
+      <div class="details">
+        <span class="name">{{ item.name }}</span>
+        <span class="cost">{{ item.cost | number }} galletas</span>
+        <span class="production">+{{ item.production }} cps</span>
+      </div>
+
+      <div class="count">{{ item.owned }}</div>
+    </div>
+  </section>
+
+</div>
